@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{{ template "html_ie" }}
+{{ template "head" }}
+<body>
+    <div class="wrapper">
+        {{ template "menubar" . }}
+
+        <div class="breadcrumbs">
+            <div class="container">
+                <h1 class="pull-left">Blank Page</h1>
+                <ul class="pull-right breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li class="active">Blank Page</li>
+                </ul>
+            </div><!--/container-->
+        </div><!--/breadcrumbs-->
+
+        <div class="container content height-500">
+            <div class="panel panel-yellow margin-bottom-40">
+                <div class="panel-heading">
+                    <table><tbody><tr>
+                        <td class="hL"><h3 class="panel-title"><i class="fa fa-gear"></i> Competitions</h3></td>
+                        <td class="hR"><a href="/u/newcomp" class="btn-u" type="button"><i class="fa fa-sliders"></i> Add</a></td>
+                    </tr></tbody></table>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Competition</th>
+                            <th>Prize</th>
+                            <th>Num entries</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .comps}}
+                        <tr>
+                            <td><a href="/comp/{{.objectId}}">{{.Name}}</a></td>
+                            <td>{{.Prize.Title}}</td>
+                            <td>{{len .Entries}}</td>
+                        </tr>
+                        {{else}} 
+                        <tr><td colspan="3">No comps</td></tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+{{ template "footer" . }}
+</div>
+
+{{ template "scripts" . }}
+
+</body>
+</html>

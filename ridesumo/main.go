@@ -54,6 +54,7 @@ func makeRoutes() http.Handler {
 	userRoutes := mux.NewRouter()
 	userRoutes.HandleFunc("/u/dashboard", Dashboard).Methods("GET")
 	userRoutes.HandleFunc("/u/comps", GetComps).Methods("GET")
+	userRoutes.HandleFunc("/u/newcomp", NewComp).Methods("GET")
 	userRoutes.HandleFunc("/u/comps/{id}", GetComp).Methods("GET")
 	userRoutes.HandleFunc("/u/comps", CreateComp).Methods("POST")
 	userRoutes.HandleFunc("/u/comps/{id}", EditComp).Methods("POST")

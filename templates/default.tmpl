@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{{ template "html_ie" }}
+{{ template "head" }}
+<body>
+<div class="wrapper">
+    {{ template "menubar" . }}
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Blank Page</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Pages</a></li>
+                <li class="active">Blank Page</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+
+    <div class="container content height-500">
+    </div>
+
+    {{ template "footer" . }}
+</div>
+
+{{ template "scripts" . }}
+
+</body>
+</html>

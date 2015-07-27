@@ -1,0 +1,13 @@
+/* Add here all your css styles (customizations) */
+td.hR {
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+}
+td.hL {
+  text-align: left;
+  white-space: nowrap;
+  padding-right: 8px;
+  vertical-align: top;
+  width: 100%;
+}
